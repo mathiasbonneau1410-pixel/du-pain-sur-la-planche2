@@ -1,0 +1,150 @@
+/* Configuración General */
+:root {
+  --color-crema: #F9F7F2;
+  --color-beige: #F5F0E1;
+  --color-cafe: #8B5E3C;
+  --color-cafe-oscuro: #6D482F;
+  --color-texto: #2C2420;
+}
+
+body {
+  background-color: var(--color-crema);
+  color: var(--color-texto);
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: rgba(249, 247, 242, 0.95);
+  position: fixed;
+  width: 90%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn-boutique {
+  background-color: var(--color-cafe);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-boutique:hover {
+  background-color: var(--color-cafe-oscuro);
+}
+
+/* Sección Hero (La de arriba) */
+.hero {
+  margin-top: 100px;
+  padding: 60px 5%;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border: 1px solid #E6DCC3;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 10px 10px 0px var(--color-beige);
+}
+
+.quote {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: var(--color-beige);
+  padding: 20px;
+  border: 1px solid #D4A373;
+  max-width: 250px;
+  font-style: italic;
+  color: var(--color-cafe);
+}
+
+/* Sección de La Carte */
+.la-carte {
+  text-align: center;
+  padding: 80px 5%;
+  background-color: white;
+}
+
+.la-carte h2 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.menu-tabs button {
+  background: white;
+  border: 1px solid #E6DCC3;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.menu-tabs button.active {
+  background: var(--color-cafe);
+  color: white;
+}
+
+/* Responsive (para celulares) */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    display: none;
+  }
+}
